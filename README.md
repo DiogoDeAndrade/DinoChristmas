@@ -9,6 +9,10 @@ TBD
 
 ## Dev shots
 
+![Dev Shot 1](Screenshots/dinosanta.gif)
+![Dev Shot 2](Screenshots/dinosanta_nodither.gif)
+3d dinossaur baked into 2d sprites with with and without dithering
+
 ## Future work
 
 ## Art
