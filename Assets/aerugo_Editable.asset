@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af9e9fbff878f3240b0f43fa4ab7741d, type: 3}
+  m_Name: aerugo_Editable
+  m_EditorClassIdentifier: 
+  colors:
+  - name: 2f1e1a
+    color: {r: 0.18431373, g: 0.11764706, b: 0.101960786, a: 1}
+  - name: 4f3322
+    color: {r: 0.14343613, g: 0.30980393, b: 0.13333334, a: 1}
+  - name: 723627
+    color: {r: 0.17638648, g: 0.44705883, b: 0.15294121, a: 1}
+  - name: 95392c
+    color: {r: 0.18464492, g: 0.58431375, b: 0.17254901, a: 1}
+  - name: c75533
+    color: {r: 0.2677387, g: 0.78039217, b: 0.19999997, a: 1}
+  - name: e76d46
+    color: {r: 0.37910098, g: 0.90588236, b: 0.27450982, a: 1}
+  - name: 934e28
+    color: {r: 0.24505122, g: 0.5764706, b: 0.15686272, a: 1}
+  - name: a2663c
+    color: {r: 0.63529414, g: 0.4, b: 0.23529412, a: 1}
+  - name: c87d40
+    color: {r: 0.78431374, g: 0.49019608, b: 0.2509804, a: 1}
+  - name: f5a95b
+    color: {r: 0.9607843, g: 0.6627451, b: 0.35686275, a: 1}
+  - name: 6b8b8c
+    color: {r: 0.41960785, g: 0.54509807, b: 0.54901963, a: 1}
+  - name: 81a38e
+    color: {r: 0.5058824, g: 0.6392157, b: 0.5568628, a: 1}
+  - name: aac39e
+    color: {r: 0.6666667, g: 0.7647059, b: 0.61960787, a: 1}
+  - name: ffffff
+    color: {r: 0.7566869, g: 0.9811321, b: 0.745105, a: 1}
+  - name: d1d0ce
+    color: {r: 0.6774653, g: 0.8301887, b: 0.6774653, a: 1}
+  - name: bab7b2
+    color: {r: 0.59949607, g: 0.7075472, b: 0.5840602, a: 1}
+  - name: 898a8a
+    color: {r: 0.43845677, g: 0.5566038, b: 0.43845677, a: 1}
+  - name: 686461
+    color: {r: 0.31132072, g: 0.41509432, b: 0.31132072, a: 1}
+  - name: 554d4b
+    color: {r: 0.23504807, g: 0.3584906, b: 0.23504807, a: 1}
+  - name: 3c3d3b
+    color: {r: 0.20808114, g: 0.26415092, b: 0.20808114, a: 1}
+  - name: 343230
+    color: {r: 0.18973085, g: 0.20392157, b: 0.1882353, a: 1}
+  - name: 87d1ef
+    color: {r: 0.5508653, g: 0.9372549, b: 0.5294118, a: 1}
+  - name: 64a1c2
+    color: {r: 0.39215687, g: 0.7607843, b: 0.40690106, a: 1}
+  - name: 466480
+    color: {r: 0.27619138, g: 0.5019608, b: 0.27450982, a: 1}
+  - name: 2f485c
+    color: {r: 0.18431373, g: 0.36078432, b: 0.18945242, a: 1}
+  - name: 242e35
+    color: {r: 0.14652683, g: 0.20784314, b: 0.14117648, a: 1}
+  - name: 1b2026
+    color: {r: 0.10598371, g: 0.14901961, b: 0.105882354, a: 1}
+  - name: aa9c8a
+    color: {r: 0.6666667, g: 0.6117647, b: 0.5411765, a: 1}
+  - name: 917f6d
+    color: {r: 0.5686275, g: 0.49803922, b: 0.42745098, a: 1}
+  - name: 86624a
+    color: {r: 0.5254902, g: 0.38431373, b: 0.2901961, a: 1}
+  - name: 715b48
+    color: {r: 0.44313726, g: 0.35686275, b: 0.28235295, a: 1}
+  - name: 5e4835
+    color: {r: 0.36862746, g: 0.28235295, b: 0.20784314, a: 1}
