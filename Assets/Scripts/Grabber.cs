@@ -2,6 +2,7 @@ using UnityEngine;
 using NaughtyAttributes;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using System;
 
 public class Grabber : MonoBehaviour
 {
@@ -25,13 +26,36 @@ public class Grabber : MonoBehaviour
     private Transform clawTop;
     [SerializeField]
     private Transform clawBottom;
+    [SerializeField]
+    private BoxCollider2D clawBoxCollider;
 
     LineRenderer lineRenderer;
+    Vector3      prevClawPos;
+    float        _clawSpeed;
+    Rigidbody2D  clawTopRB;
+    Rigidbody2D  clawBottomRB;
+
+    public float clawSpeed => _clawSpeed;
 
     void Start()
     {
+        prevClawPos = clawTip.transform.position;
+
+        clawTopRB = clawTop.GetComponent<Rigidbody2D>();
+        clawBottomRB = clawBottom.GetComponent<Rigidbody2D>();
     }
-   
+
+    private void FixedUpdate()
+    {
+        _clawSpeed = (clawTip.transform.position - prevClawPos).magnitude / Time.fixedDeltaTime;
+
+        if (clawBoxCollider)
+        {
+            clawBoxCollider.size = new Vector2(clawTip.localPosition.x, clawBoxCollider.size.y);
+            clawBoxCollider.offset = new Vector2(clawTip.localPosition.x * 0.5f, 0.0f);
+        }
+    }
+
     void Update()
     {
         UpdateGrabber();
@@ -83,8 +107,11 @@ public class Grabber : MonoBehaviour
         lineRenderer.SetPositions(positions.ToArray());
 
         float angle = Mathf.Lerp(clawLimit.x, clawLimit.y, 1.0f - grab);
-        clawTop.localRotation = Quaternion.Euler(0.0f, 0.0f, angle);
-        clawBottom.localRotation = Quaternion.Euler(0.0f, 0.0f, -angle);
+        if (clawTopRB) clawTopRB.SetRotation(angle);
+        else clawTop.localRotation = Quaternion.Euler(0.0f, 0.0f, angle);
+
+        if (clawBottomRB) clawBottomRB.SetRotation(-angle);
+        else clawBottom.localRotation = Quaternion.Euler(0.0f, 0.0f, -angle);
     }
 
     Vector2 GetPointOnLineWithDistance(Vector2 p, Vector2 lineStart, Vector2 lineDir, float segmentLength)
@@ -122,7 +149,7 @@ public class Grabber : MonoBehaviour
 
     Vector3 GetPos(int index)
     {
-        var ret = Vector3.zero + Vector3.up * ((maxAmplitude - minAmplitude) * extend + minAmplitude);
+        var ret = Vector3.zero + Vector3.up * ((maxAmplitude - minAmplitude) * (1 - extend) + minAmplitude);
         
         if (index == 1) ret.y = -ret.y;
 
@@ -132,7 +159,15 @@ public class Grabber : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
+        Gizmos.matrix = transform.localToWorldMatrix;
         Gizmos.DrawWireSphere(GetPos(0), 10.0f);
         Gizmos.DrawWireSphere(GetPos(1), 10.0f);
+        Gizmos.matrix = Matrix4x4.identity;
+    }
+
+    public void SetParameters(float extendValue, float clawValue)
+    {
+        extend = extendValue;
+        grab = clawValue;
     }
 }

@@ -11,13 +11,14 @@ TBD
 
 ![Dev Shot 1](Screenshots/dinosanta.gif)
 ![Dev Shot 2](Screenshots/dinosanta_nodither.gif)
+
 3d dinossaur baked into 2d sprites with with and without dithering
 
 ## Future work
 
 ## Art
 
-- [Aerugo Palette](https://lospec.com/palette-list/aerugo) by [Lizalot](https://lospec.com/lizalotdraws)
+- [Dino Family](https://demching.itch.io/dino-family) by [DemChing](https://demching.itch.io/), licensed through [CC-BY 4.0]
 - Everything else done by [Diogo de Andrade], licensed through the [CC0] license.
 
 ## Sound
@@ -43,4 +44,5 @@ TBD
 [OkapiKit]:https://github.com/VideojogosLusofona/OkapiKit
 [Unity Common]:https://github.com/DiogoDeAndrade/UnityCommon
 [Game Creator's Club]:https://game-creators-club.itch.io/
+[Fab End User License]:https://www.fab.com/eula
 [MIT]:LICENSE
