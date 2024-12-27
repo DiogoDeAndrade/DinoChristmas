@@ -14,7 +14,6 @@ public class LevelManager : MonoBehaviour
     [SerializeField] CanvasGroup        gameOverGroup;
     [SerializeField] TextMeshProUGUI    levelTimer;
 
-    [SerializeField] int            currentLevel = 1;
     [SerializeField] Level[]        levelPrefabs;
 
     XMasTree[]  trees;
@@ -24,7 +23,6 @@ public class LevelManager : MonoBehaviour
 
     void Start()
     {
-        trees = FindObjectsByType<XMasTree>(FindObjectsSortMode.None);
         state = GameState.Play;
         continueControl.playerInput = playerInput;
 
@@ -34,20 +32,22 @@ public class LevelManager : MonoBehaviour
         if (level == null)
         {
             // Instantiate level
-            level = Instantiate(levelPrefabs[currentLevel - 1]);            
+            level = Instantiate(levelPrefabs[GameManager.currentLevel - 1]);
         }
 
         var cg = levelTimer.GetComponent<CanvasGroup>();
         if (level.timeInSeconds > 0)
         {
-            cg.FadeIn(0.5f);
+            cg.FadeIn(0.25f);
             currentTime = level.timeInSeconds;
         }
         else
         {
-            cg.FadeOut(0.5f);
+            cg.FadeOut(0.25f);
             currentTime = 0;
         }
+
+        trees = FindObjectsByType<XMasTree>(FindObjectsSortMode.None);
     }
 
     // Update is called once per frame
@@ -55,6 +55,14 @@ public class LevelManager : MonoBehaviour
     {
         if (state == GameState.Play)
         {
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                FullscreenFader.FadeOut(1.0f, Color.black, () =>
+                {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                });
+            }
+
             if (currentTime > 0)
             {
                 currentTime -= Time.deltaTime;
@@ -97,7 +105,14 @@ public class LevelManager : MonoBehaviour
             {
                 FullscreenFader.FadeOut(1.0f, Color.black, () =>
                 {
-                    SceneManager.LoadScene(0);
+                    if (GameManager.NextLevel())
+                    {
+                        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                    }
+                    else
+                    {
+                        SceneManager.LoadScene("EndGame");
+                    }
                 });
             }
         }
