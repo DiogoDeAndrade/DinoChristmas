@@ -11,11 +11,8 @@ TBD
 
 ![Dev Shot 1](Screenshots/screen01.png)
 
-Actual game, the above was an aborted idea.
-
 ## Future work
 
-- Elevator/moving platforms
 - Sound
 - Main menu
 - Credits

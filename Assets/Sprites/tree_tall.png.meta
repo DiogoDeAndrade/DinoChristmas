@@ -1,7 +1,10 @@
 fileFormatVersion: 2
-guid: 66ee23f50d40fb640a1b73acccb9bfa6
+guid: 11f8b055140a0ad41995715a708f4f8a
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 2768723338751520338
+    second: tree_tall_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -39,14 +42,14 @@ TextureImporter:
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 0
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 0
-  alignment: 0
+  alignment: 7
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 0.25
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
@@ -97,89 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: jump_0
+      name: tree_tall_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 11
         y: 0
-        width: 24
-        height: 24
-      alignment: 9
-      pivot: {x: 0.5, y: 0.12}
+        width: 25
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 528c086aee332ba42b9cec99077e6b1d
-      internalID: 1338294861
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jump_1
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 0
-        width: 24
-        height: 24
-      alignment: 9
-      pivot: {x: 0.5, y: 0.12}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3a1650281ca2c6647b2355b137ca8adf
-      internalID: -2057506730
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jump_2
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 24
-        height: 24
-      alignment: 9
-      pivot: {x: 0.5, y: 0.3}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6542974ff6aec1646bd20640e623ccee
-      internalID: -610843359
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jump_3
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 0
-        width: 24
-        height: 24
-      alignment: 9
-      pivot: {x: 0.5, y: 0.12}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 22f99901de70aa344883ad7a67687573
-      internalID: 1948947541
+      spriteID: 25e2e9f053b7c6620800000000000000
+      internalID: 2768723338751520338
       vertices: []
       indices: 
       edges: []
@@ -188,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: aa34ffde35249d3429e942ade4820884
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -198,10 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      jump_0: 1338294861
-      jump_1: -2057506730
-      jump_2: -610843359
-      jump_3: 1948947541
+      tree_tall_0: 2768723338751520338
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
