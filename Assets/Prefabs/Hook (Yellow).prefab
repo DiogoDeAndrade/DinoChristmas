@@ -101,3 +101,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tolerance: 10
+  _hookColor: 0
+  rightSound: {fileID: 8300000, guid: 3c359c3ccc56984469aee8c80649ebd5, type: 3}
+  wrongSound: {fileID: 8300000, guid: defff1a8f2aef294c9d29db7f615f645, type: 3}

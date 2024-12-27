@@ -35,7 +35,10 @@ public class Title : UIGroup
         if (creditsButton) creditsButton.onInteract += ShowCredits;
         if (quitButton) quitButton.onInteract += QuitGame;
 
-        SoundManager.PlayMusic(titleMusic);
+        if (titleMusic)
+        {
+            SoundManager.PlayMusic(titleMusic);
+        }
     }
 
     private void ShowCredits(BaseUIControl control)

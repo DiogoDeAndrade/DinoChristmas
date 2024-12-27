@@ -5,6 +5,8 @@ public class Hook : MonoBehaviour
 {
     [SerializeField] private float      tolerance = 5.0f;
     [SerializeField] private BallColor  _hookColor;
+    [SerializeField] private AudioClip  rightSound;
+    [SerializeField] private AudioClip  wrongSound;
 
     Ball hookedBall;
     float cooldown;
@@ -37,6 +39,15 @@ public class Hook : MonoBehaviour
                     // Hook this ball
                     ball.Hook(this);
                     hookedBall = ball;
+
+                    if (hookedBall.ballColor == hookColor)
+                    {
+                        if (rightSound) SoundManager.PlaySound(SoundType.PrimaryFX, rightSound, 1.0f, Random.Range(0.9f, 1.1f));
+                    }
+                    else
+                    {
+                        if (wrongSound) SoundManager.PlaySound(SoundType.PrimaryFX, wrongSound, 1.0f, Random.Range(0.9f, 1.1f));
+                    }
                 }
             }
         }

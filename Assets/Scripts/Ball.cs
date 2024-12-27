@@ -67,7 +67,7 @@ public class Ball : MonoBehaviour
                     var vec = collision.contacts[0].normal;
                     vec.y = 1.0f;
                     vec.Normalize();
-                    collision.otherRigidbody.linearVelocity = vec * 500.0f;
+                    collision.otherRigidbody.linearVelocity = vec * 300.0f;
                 }
             }
         }

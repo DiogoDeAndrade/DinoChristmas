@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5267902767688233679}
   - component: {fileID: 7829602480554461210}
   - component: {fileID: 770824262871192518}
+  - component: {fileID: 5907196651778300139}
   m_Layer: 8
   m_Name: Ball (Yellow)
   m_TagString: Untagged
@@ -165,6 +166,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a42c42a3084cb814aaf4ce2b832dc37c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ballColor: 0
+  _ballColor: 0
   settleTime: 2
   dislodgeVelocity: 50
+--- !u!114 &5907196651778300139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6146522609490610440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d84046b95e7a1e84b8d3c38a1c29923d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropSnd: {fileID: 8300000, guid: 89e837f8337bba348b8fbc8b5e306a47, type: 3}
+  cooldown: 0.1
+  volumeVariance: {x: 0.20203492, y: 0.3223837}
+  pitchVariance: {x: 0.894186, y: 1.1872094}

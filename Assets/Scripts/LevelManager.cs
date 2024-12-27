@@ -13,6 +13,9 @@ public class LevelManager : MonoBehaviour
     [SerializeField] CanvasGroup        levelCompleteGroup;
     [SerializeField] CanvasGroup        gameOverGroup;
     [SerializeField] TextMeshProUGUI    levelTimer;
+    [SerializeField] AudioClip          levelMusic;
+    [SerializeField] AudioClip          successSnd;
+    [SerializeField] AudioClip          gameOverSnd;
 
     [SerializeField] Level[]        levelPrefabs;
 
@@ -48,6 +51,11 @@ public class LevelManager : MonoBehaviour
         }
 
         trees = FindObjectsByType<XMasTree>(FindObjectsSortMode.None);
+
+        if (levelMusic)
+        {
+            SoundManager.PlayMusic(levelMusic, 0.5f, 1.0f);
+        }
     }
 
     // Update is called once per frame
@@ -62,6 +70,10 @@ public class LevelManager : MonoBehaviour
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                 });
             }
+            if (Input.GetKeyDown(KeyCode.F1))
+            {
+                LevelComplete();
+            }
 
             if (currentTime > 0)
             {
@@ -70,6 +82,7 @@ public class LevelManager : MonoBehaviour
                 {
                     state = GameState.GameOver;
                     gameOverGroup.FadeIn(0.5f);
+                    if (gameOverSnd) SoundManager.PlaySound(SoundType.PrimaryFX, gameOverSnd);
                 }
 
                 int mins = Mathf.Max(0, Mathf.FloorToInt(currentTime / 60.0f));
@@ -94,8 +107,7 @@ public class LevelManager : MonoBehaviour
                 }
                 if (isComplete)
                 {
-                    state = GameState.Complete;
-                    levelCompleteGroup.FadeIn(0.5f);
+                    LevelComplete();
                 }
             }
         }
@@ -126,5 +138,12 @@ public class LevelManager : MonoBehaviour
                 });
             }
         }
+    }
+
+    void LevelComplete()
+    {
+        state = GameState.Complete;
+        levelCompleteGroup.FadeIn(0.5f);
+        if (successSnd) SoundManager.PlaySound(SoundType.PrimaryFX, successSnd);
     }
 }
