@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using TMPro;
@@ -10,6 +11,7 @@ public class Karaoke : MonoBehaviour
     [SerializeField] AudioClip          song;
     [SerializeField] CanvasGroup        karokeDisplay;
     [SerializeField] TextMeshProUGUI    karaokeText;
+    [SerializeField] float              staticOffset;
     [SerializeField] bool               recordMode;
 
     class SongData
@@ -22,8 +24,9 @@ public class Karaoke : MonoBehaviour
     private List<SongData> songData;
     private float currentSongTime;
     private int currentLyricsIndex;
+    private AudioSource songSource;
 
-    void Start()
+    IEnumerator Start()
     {
         var lines = lyricsFile.text.Split('\n', System.StringSplitOptions.None);
 
@@ -36,8 +39,8 @@ public class Karaoke : MonoBehaviour
             {
                 songData.Add(new SongData()
                 {
-                    startTime = float.Parse(data[0]),
-                    endTime = float.Parse(data[1]),
+                    startTime = float.Parse(data[0]) + staticOffset,
+                    endTime = float.Parse(data[1]) + staticOffset,
                     lyrics = CleanString(data[2])
                 });
             }
@@ -57,14 +60,22 @@ public class Karaoke : MonoBehaviour
             foreach (var sd in songData) sd.startTime = sd.endTime = float.MaxValue;
         }
 
-        SoundManager.PlayMusic(song, 1.0f, 1.0f);
+        currentLyricsIndex = -1;
+        karokeDisplay.alpha = 0.0f;
+
+        yield return new WaitForSeconds(0.1f);
+
+        songSource = SoundManager.PlayMusic(song, 1.0f, 1.0f);
         currentSongTime = 0.0f;
         currentLyricsIndex = 0;
     }
 
     void Update()
     {
-        currentSongTime += Time.deltaTime;
+        if (currentLyricsIndex == -1) return;
+
+        //currentSongTime += Time.deltaTime;
+        currentSongTime = songSource.time;
 
         if (songData.Count > currentLyricsIndex)
         {
