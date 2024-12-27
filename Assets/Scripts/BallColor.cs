@@ -1,0 +1,1 @@
+public enum BallColor { Yellow, Red, Green, Blue };

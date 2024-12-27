@@ -3,10 +3,14 @@ using UnityEngine;
 
 public class Hook : MonoBehaviour
 {
-    [SerializeField] private float tolerance = 5.0f;
+    [SerializeField] private float      tolerance = 5.0f;
+    [SerializeField] private BallColor  _hookColor;
 
     Ball hookedBall;
     float cooldown;
+
+    public BallColor hookColor => _hookColor;
+    public bool isCorrect => (hookedBall != null) && (hookedBall.ballColor == _hookColor);
 
     void Start()
     {

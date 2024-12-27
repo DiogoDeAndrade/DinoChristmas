@@ -9,16 +9,26 @@ TBD
 
 ## Dev shots
 
-![Dev Shot 1](Screenshots/dinosanta.gif)
-![Dev Shot 2](Screenshots/dinosanta_nodither.gif)
+![Dev Shot 1](Screenshots/screen01.png)
 
-3d dinossaur baked into 2d sprites with with and without dithering
+Actual game, the above was an aborted idea.
 
 ## Future work
+
+- Elevator/moving platforms
+- Sound
+- Main menu
+- Credits
+- Improve background
+  - Window
+  - Fireplace
+  - Couch
+  - Presents
 
 ## Art
 
 - [Dino Family](https://demching.itch.io/dino-family) by [DemChing](https://demching.itch.io/), licensed through [CC-BY 4.0]
+- Font [Santa's Air Mail](https://www.dafont.com/pt/santa-s-air-mail.font) by [imagex](https://www.imagex-fonts.com), free for non-commercial use.
 - Everything else done by [Diogo de Andrade], licensed through the [CC0] license.
 
 ## Sound
