@@ -14,8 +14,6 @@ TBD
 ## Future work
 
 - Sound
-- Main menu
-- Credits
 - Improve background
   - Window
   - Fireplace
@@ -27,6 +25,7 @@ TBD
 - [Dino Family](https://demching.itch.io/dino-family) by [DemChing](https://demching.itch.io/), licensed through [CC-BY 4.0]
 - Font [Santa's Air Mail](https://www.dafont.com/pt/santa-s-air-mail.font) by [imagex](https://www.imagex-fonts.com), free for non-commercial use.
 - Font [XMas Dad](https://www.dafont.com/xmas-dad.font) by [imagex](https://www.imagex-fonts.com), free for non-commercial use.
+- Logo is AI Generated
 - Everything else done by [Diogo de Andrade], licensed through the [CC0] license.
 
 ## Sound
