@@ -16,14 +16,6 @@ Place all the balls in the correct places within the time limit.
 ![Dev Shot 1](Screenshots/screen01.png)
 ![Dev Shot 3](Screenshots/screen03.png)
 
-## Future work
-
-- Improve background
-  - Window
-  - Fireplace
-  - Couch
-  - Presents
-
 ## Art
 
 - [Dino Family](https://demching.itch.io/dino-family) by [DemChing](https://demching.itch.io/), licensed through [CC-BY 4.0]
