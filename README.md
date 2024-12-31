@@ -15,6 +15,7 @@ Place all the balls in the correct places within the time limit.
 
 ![Dev Shot 1](Screenshots/screen01.png)
 ![Dev Shot 3](Screenshots/screen03.png)
+![Dev Shot 3](Screenshots/screen04.png)
 
 ## Art
 
