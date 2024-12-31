@@ -102,4 +102,18 @@ public class Ball : MonoBehaviour
             spriteRenderer.color = startColor;
         }
     }
+
+    public void SetPhysics(bool enable)
+    {
+        if (enable)
+        {
+            rb.bodyType = RigidbodyType2D.Dynamic;
+        }
+        else
+        {
+            rb.bodyType = RigidbodyType2D.Kinematic;
+            rb.linearVelocity = Vector2.zero;
+            rb.angularVelocity = 0.0f;
+        }
+    }
 }
